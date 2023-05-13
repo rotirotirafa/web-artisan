@@ -93,3 +93,9 @@ Route::prefix('/api')->name('API Routes')->group(function(){
         ));
     });
 });
+
+//Request Input (Query Parameters)
+Route::get('exemplo', function() {
+    dd(request()->all()); //DD = Dump and Die
+    ///exemplo?teste=1 = array("teste"=>"1")
+});
