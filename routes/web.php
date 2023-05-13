@@ -85,3 +85,11 @@ Route::get('/fun/named-route', function() {
 Route::get('/fun/download', function(){
     return response()->download(public_path('/robots.txt'));
 });
+
+Route::prefix('/api')->name('API Routes')->group(function(){
+    Route::get('/users', function(){
+        return response()->json(array(
+            "name"=>"Rafael"
+        ));
+    });
+});
